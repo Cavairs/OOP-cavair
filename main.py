@@ -107,3 +107,6 @@ r1.rate_hw(s1, 'Python', 9)
 r1.rate_hw(s2, 'Python', 8)
 r2.rate_hw(s1, 'Python', 10)
 r2.rate_hw(s2, 'Python', 9)
+
+
+print(f"===Ревьювер===: \n{r1}\n\n===Лектор===:\n{l1}\n\n===Студент===:\n{s1}")
