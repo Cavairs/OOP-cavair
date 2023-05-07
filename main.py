@@ -77,36 +77,36 @@ class Reviewer(Mentor):
 
 
 # создаем тестовых студентов, лекторов и экспертов
-s1 = Student('Ivan', 'Ivanov', 'm')
-s1.courses_in_progress += ['Python']
-s1.courses_attached += ['Python']
-s2 = Student('Petr', 'Petrov', 'm')
-s2.courses_in_progress += ['Python']
-s2.courses_attached += ['Python']
+student_1 = Student('Юрий', 'Петров', 'm')
+student_1.courses_in_progress += ['Python']
+student_1.courses_attached += ['Python']
+student_2 = Student('Игорь', 'Колесников', 'm')
+student_2.courses_in_progress += ['Python']
+student_2.courses_attached += ['Python']
 
-l1 = Lecturer('Max', 'Smirnov')
-l1.courses_attached += ['Python']
-l2 = Lecturer('Anna', 'Ivanova')
-l2.courses_attached += ['Python']
+lecturer_1 = Lecturer('Вадим', 'Товкало')
+lecturer_1.courses_attached += ['Python']
+lecturer_2 = Lecturer('Даниил', 'Белобров')
+lecturer_2.courses_attached += ['Python']
 
-r1 = Reviewer('Sergey', 'Sidorov')
-r1.courses_attached += ['Python']
-r2 = Reviewer('Dmitry', 'Petrov')
-r2.courses_attached += ['Python']
+reviewer_1 = Reviewer('Алиса', 'Ежеля')
+reviewer_1.courses_attached += ['Python']
+reviewer_2 = Reviewer('Наталья', 'Балакина')
+reviewer_2.courses_attached += ['Python']
 
 # добавляем оценки студентам у лекторов, проверяем среднюю оценку у лекторов
-s1.rate_lector(l1, 'Python', 10)
-s1.rate_lector(l2, 'Python', 9)
-s2.rate_lector(l1, 'Python', 8)
-s2.rate_lector(l2, 'Python', 7)
-print(l1)
-print(l2)
+student_1.rate_lector(lecturer_1, 'Python', 10)
+student_1.rate_lector(lecturer_2, 'Python', 9)
+student_2.rate_lector(lecturer_1, 'Python', 8)
+student_2.rate_lector(lecturer_2, 'Python', 7)
+print(lecturer_1)
+print(lecturer_2)
 
 # добавляем оценки студентам у проверяющих
-r1.rate_hw(s1, 'Python', 9)
-r1.rate_hw(s2, 'Python', 8)
-r2.rate_hw(s1, 'Python', 10)
-r2.rate_hw(s2, 'Python', 9)
+reviewer_1.rate_hw(student_1, 'Python', 9)
+reviewer_1.rate_hw(student_2, 'Python', 8)
+reviewer_2.rate_hw(student_1, 'Python', 10)
+reviewer_2.rate_hw(student_2, 'Python', 9)
 
 
-print(f"===Ревьювер===: \n{r1}\n\n===Лектор===:\n{l1}\n\n===Студент===:\n{s1}")
+print(f"===Ревьювер===: \n{reviewer_1}\n\n===Лектор===:\n{lecturer_1}\n\n===Студент===:\n{student_1}")
